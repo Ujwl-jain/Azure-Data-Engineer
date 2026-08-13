@@ -1,0 +1,41 @@
+What is cloud?
+
+It is a central location to store the data. 
+
+For accessing the data from anywhere is why cloud computing exist, One can not access the data in its own laptop if it is not with him.
+But Since internet being everywhere, using cloud we can access the data from anywhere, Example: Google drive is a cloud storage device
+
+It is vast sky of internet world, with too much data.
+
+but it is not limited to only storing data.
+
+---------------------------------
+-> What is cloud computing?
+Basically, what it is , a virtual machine where one can perform multiple task which one performs on a local machine. Like video edting, SQL, Coding, etc etc.
+
+Cloud provider will provide you with many types of resource a local system provide: Processor, RAM, Windows, Storage, software, Working envirnment etc etc. but one have to pay for it. The biggest advantage is that a cloud provider can built your system and its like renting it for few months. we do not need to pay for whole system, cloud provider can easily provide it for 1 month or 2 month or so on and on. it is way to cost efficient.
+
+-------
+Azure and cloud is interchangable terms.
+-------
+
+-----------------------------------
+Lets understand why it is so beneficial for companies:
+
+Lets say a company needs 50 laptops. Just for the development purpose.   But due to inconsistency and uncertainity only around 20 laptops is used in first quarter and in next quarter 80 laptops is used. Due to which unused laptop is just waste in first quarter while , company needs to purchase another 30 laptosp for second quarter
+
+instead of this lets ask the cloud provide for the 50 machines with the desierd configs. Renter can pause the machine and resume the machine as per need, reducing the cost.
+
+----------------------
+how they are providing with these machine? using the data center
+
+popular cloud providers: Azure, AWS, GCP - major cloud machine providers, because they have their data center where servers and remote servers exist
+
+Data centers: They have really big data servers:
+
+In which they have servers or remote servers, They configure what we want in those servers, Using those servers they provide the access through the endpoints to the virtual machine and we access the endpoints through the internet.
+
+
+Conclusion: Cloud providers provide the computing resources On-Demand
+
+

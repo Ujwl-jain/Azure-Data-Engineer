@@ -1,0 +1,40 @@
+Types of Cloud services:
+
+The layers of a cloud environment:
+
+Physical Datacenter: The actual building/facility where the cloud provider's servers and networking equipment are located.
+Physical Network: Physical networking equipment such as cables, switches, and routers that connect the servers.
+Physical Hosts: Physical servers that provide the actual computing power.
+Network Controls: Logical network components such as firewalls, security rules, and network configurations.
+Operating System (OS): Software such as Windows or Linux that manages the computer's hardware and provides an environment for applications to run.
+Applications: Software/programs that perform tasks for the user, such as a web application or business application.
+Data: Information created, processed, or stored by the application.
+Identity & Directory Infrastructure: Systems that manage users, accounts, authentication, and access permissions.
+Accounts & Identities: Individual users, accounts, credentials, and their permissions.
+Devices: Physical devices such as laptops, desktops, and mobile phones used by customers to access cloud services.
+Who manages what?
+
+On-Premises:
+Customer manages everything — physical datacenter, physical network, physical hosts, network controls, OS, applications, data, identities, and devices.
+
+IaaS (Infrastructure as a Service):
+Cloud provider manages Physical Datacenter + Physical Network + Physical Hosts + Network Controls.
+Customer manages OS + Applications + Data + Identities/Accounts + Devices.
+
+PaaS (Platform as a Service):
+Cloud provider manages Physical Datacenter + Physical Network + Physical Hosts + Network Controls + OS.
+Customer manages Applications + Data + Identities/Accounts + Devices.
+
+SaaS (Software as a Service):
+Cloud provider manages Physical Datacenter + Physical Network + Physical Hosts + Network Controls + OS + Applications.
+Customer manages Data + Identities/Accounts + Devices.
+
+Easy rule to remember
+
+On-Prem → You manage everything.
+IaaS → Provider manages infrastructure; you manage OS and above.
+PaaS → Provider manages infrastructure + OS; you manage application and above.
+SaaS → Provider manages the application and everything below it; you mainly manage your data, identity/access, and devices.
+
+-> Microsoft Fabric: it is the best SaaS
+

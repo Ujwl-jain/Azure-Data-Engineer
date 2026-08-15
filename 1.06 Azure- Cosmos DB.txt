@@ -1,0 +1,33 @@
+Cosmos DB - Azure
+
+Another resource for the Semi Structure data. Semi structure data is Also refer to as NoSQL data
+
+NoSQL: not only SQL, but refer to as non relation data
+
+Cosmos DB is built to work with non relational data
+
+--------
+2 recommended things will show after searching the Azure Cosmos DB:
+1. Azure Cosmos DB for NoSQL(fIRST IT WAS AZURE CORE SQL)
+2. Azure Cosmos DB for MongoDB
+
+Others are:
+Azure cosmos db for postgreSQL, For apache gREMLIN, APACHE CASSANDRA, AND FOR TABLE(briefly explain them)
+
+--------
+Azure Cosmos DB for NoSQL(fIRST IT WAS AZURE CORE SQL)
+
+Works with key value pair: 
+like this:
+{
+'id' : 01,
+'name': 'Ujjwal'
+}
+
+Basically how dictioanry is in Python but vast amount of information
+
+For logs creation thsi is used and for bigger applciations each [ages ahs lots of request and response in thsi format
+
+
+Because of te quota limits(No idea about it) we can not create the DB account, showing error regarding no permission on thsi location,
+but another resource is there to handle semi and no structure data

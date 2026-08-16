@@ -31,3 +31,5 @@ For logs creation thsi is used and for bigger applciations each [ages ahs lots o
 
 Because of te quota limits(No idea about it) we can not create the DB account, showing error regarding no permission on thsi location,
 but another resource is there to handle semi and no structure data
+
+Note: Just for the learning purpose of what cosmos DB can do these notes are here

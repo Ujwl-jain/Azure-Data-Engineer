@@ -1,0 +1,104 @@
+Here we learn a resource that handle both semi and un structure data
+
+this will handle data lake as well.
+
+--------------------------------------
+Unstructure data: We stored the data in:
+
+blocks: just like hard disk
+blobs: it is basis of the azure data lake, or any data lake, data lake is built on blob storage
+files: local disk c folder, file etc
+
+-------
+Resource is called: Azure storage account, it will also create the azure blob storage by default
+
+Pick these stuffs:
+1. storage account name
+2. Redundancy: LRS, grs etc
+
+3. Check the box of Enable hierarchical namespace for creating the data lake: if you enable this it you can actually create the folders and sub folders inside the blob storagem, that is your data lake
+
+without Hierarchical namespace:
+
+Container -> blob storage
+
+with Hierarchical Namespace:
+
+Container -> blob storage -> Folders -> their sub folders -> so on, thats data lake
+
+4. access for: Hot, cool, cold(explain from your side as well)
+
+always pick hot, if you are accessing the data on very frequently on stored data in that particualr folder
+always pick cold, if you want to store the data and do not access for at least a year or more, most cheapest
+always pick cool,  if you want to store the data, and read frequently, cost is less than hot
+
+5. Enable large files, auto checked
+
+6. Networking: enable public access from all networks, disable if the data is sensitive, for that we will need to create a private endpoint
+
+7. review and create: done
+
+
+-----------
+Go to data storage resource:
+from that:
+1. Container: That is your data lake, just in case if you are seeing blob storage instead of this, then enable the check box hierarchical namespace
+Create the containers and name it, and it is private secured by azure
+after creating containers, you will see add directory/folder and upload anything in that folder, no need to worry about table,schema, as it is file upload, if it is csv it will be in csv format, just like how you upload in a drive
+
+2. File share: Kind of central repositary for files, can be used to upload any kind of data
+
+
+3. Queues: 
+4. Tables: it is way to deal with semi structure data,
+create the table option and it will just create the table, but it is not normal sql table but more like No sql table
+we can not click it or open it, to access it go to storage browser, from there acces the table on click the table
+
+Scaling of the unstructure data is like infinite level, too much
+how that table usally looks is:
+
+partitionKey   RowKey    Timestamp
+
+for example:
+PartitionKey | RowKey | Timestamp              | amount | subcat  | quantity | customer
+-------------|--------|------------------------|--------|---------|----------|---------
+food         | 1      | 2025-03-08T12:35:15Z   | 10     | noodles |          |
+food         | 2      | 2025-03-08T12:36:09Z   | 15     |         | 2        |
+food         | 3      | 2025-03-08T12:37:21Z   |        | pizza   | 1        | Rahul
+drink        | 4      | 2025-03-08T12:40:45Z   | 20     | juice   |          |
+snacks       | 5      | 2025-03-08T12:45:10Z   | 30     | chips   | 3        | Priya
+
+partition key is something that is the main key of lets say category
+rowkey is the primary key of each partition
+In this, Main primary key is the combination of partition and row key, cause the combination should be unqiue 
+
+Timestamp: when the data is added, managed by azure by default
+---------
+Adding entity:
+
+simple method, add the partition key and rowkey, and if need add another property(another column) and its type
+No need to add data in all the added property as it is unstructured
+
+like:
+PartitionKey | RowKey | Timestamp              | amount | subcat  | quantity | customer
+-------------|--------|------------------------|--------|---------|----------|---------
+food         | 1      | 2025-03-08T12:35:15Z   | 10     | noodles |          |
+food         | 2      | 2025-03-08T12:36:09Z   | 15     |         | 2        |
+
+
+Null values also exist in SQL: but you can also delete the added column or proerty for next data and it will still be upload, from above exaple
+
+lets say i delete amount and fill all the other details, it will still upload it showing amount null
+
+that is No SQL data, no need to worry about schema and all, and even after creating another new column for new data and not adding data for other existing rows and but for the nw one it will still add it with other rows as Null.
+
+2 rule are :
+1. row key should be unique in each partition, for example if food category has 1 as rowkey, it should not have another food category with rowkey as 1
+2. row key+ partition key should be unqiue through out the table
+
+thats it insert any data , any column, any type, etc etc
+
+
+Fundamentals for cosmos db and this are mostly same, but they do not have row key, only partition key and they can have object type, which used json data, works wit mongo db or Nosql db
+
+for filter or quering the data you acn use filter option to fetch the data, but in cosmos db we can use the actual queries to fetch the data
